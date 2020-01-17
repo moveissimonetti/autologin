@@ -1,0 +1,55 @@
+{
+    "name": "roomies/autologin",
+    "description": "Generate links to automatically log your users in",
+    "keywords": [
+        "laravel",
+        "roomies",
+        "autologin"
+    ],
+    "homepage": "https://github.com/roomies/autologin",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dwight Watson",
+            "email": "dwight@roomies.com",
+            "homepage": "https://www.roomies.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "illuminate/contracts": "^6.0",
+        "illuminate/http": "^6.0",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.2.2",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Roomies\\Autologin\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Roomies\\Autologin\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Roomies\\Autologin\\AutologinServiceProvider"
+            ]
+        }
+    }
+}
